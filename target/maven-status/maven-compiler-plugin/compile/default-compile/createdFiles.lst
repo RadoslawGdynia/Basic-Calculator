@@ -1,0 +1,10 @@
+Operations\MathematicalOperation.class
+module-info.class
+mainWindow\Main.class
+Operations\Subtraction.class
+Operations\OperationFactory.class
+Operations\Addition.class
+Controls\CalculatorFXMLController.class
+Operations\ErrorOperation.class
+Operations\Division.class
+Operations\Multiplication.class
