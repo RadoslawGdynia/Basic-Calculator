@@ -7,12 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Optional;
 
 public class CalculatorFXMLController {
     private static final Logger log = LoggerFactory.getLogger(CalculatorFXMLController.class);
@@ -57,7 +54,6 @@ public class CalculatorFXMLController {
     private SimpleStringProperty equation = new SimpleStringProperty("");
     private SimpleStringProperty active = new SimpleStringProperty("");
     private MathematicalOperation mathOperation;
-    private double result;
 
     public CalculatorFXMLController() {
     }
@@ -97,8 +93,8 @@ public class CalculatorFXMLController {
         double value2 = Double.parseDouble(input2);
         try {
             setEquation(input2);
-            result = mathOperation.calculate(value1, value2);
-            active.setValue(result+"");
+            double result = mathOperation.calculate(value1, value2);
+            active.setValue(result +"");
         } catch (ArithmeticException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Math error: " + e.getMessage());
@@ -115,15 +111,14 @@ public class CalculatorFXMLController {
         mathOperation=null;
         equation.set("");
         active.setValue("");
-        OperationFactory.setAlreadyUsed(false);
     }
-    public void handleComaButton(ActionEvent a){
+    public void handleComaButton(){
 
         if (active.getValue().contains(".")) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Multiple comas");
             alert.setContentText("Each number you wish to insert to calculator is limited to just one coma. Inserting more than one to a number will result in error.");
-            Optional<ButtonType> result = alert.showAndWait();
+            alert.showAndWait();
         } else {
             active.setValue(active.getValue()+".");
         }
