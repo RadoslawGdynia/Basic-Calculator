@@ -22,7 +22,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         URL url = new File("src/main/resources/CalculatorFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
-        primaryStage.setTitle("Portfolio Calculator");
+        primaryStage.setTitle("Basic Calculator");
         primaryStage.setScene(new Scene(root, 400, 600));
 
 
@@ -32,7 +32,6 @@ public class Main extends Application {
     public static void main(String[] args) {
 
         launch(args);
-
     }
 
 
