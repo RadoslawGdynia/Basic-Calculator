@@ -15,10 +15,6 @@ public class CalculatorFXMLController {
 
     private final CalculatorModel model = new CalculatorModel();
 
-
-    public CalculatorFXMLController() {
-    }
-
     public void initialize() {
         EquationLabel.textProperty().bind(model.equationDisplayTextProperty());
         ResultLabel.textProperty().bind(model.currentlyCreatedNumberProperty());

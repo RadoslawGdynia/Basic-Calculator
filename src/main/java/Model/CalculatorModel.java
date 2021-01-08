@@ -58,10 +58,9 @@ public class CalculatorModel {
         try {
             double result = mathOperation.calculate(numberValue1, numberValue2);
             currentlyCreatedNumber.setValue(result + "");
-        } catch (Exception e) {
+        } catch (ArithmeticException e) {
             createMathematicalErrorAlert(e.getMessage());
         }
-
     }
     private void createMathematicalErrorAlert(String errorMessage){
         Alert alert = new Alert(Alert.AlertType.ERROR);

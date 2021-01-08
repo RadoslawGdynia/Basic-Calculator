@@ -11,8 +11,6 @@ import java.net.URL;
 
 public class Main extends Application {
 
-
-
     @Override
     public void init() {
     }
