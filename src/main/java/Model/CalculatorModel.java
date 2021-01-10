@@ -1,7 +1,7 @@
 package Model;
 
-import Operations.MathematicalOperation;
-import Operations.OperationFactory;
+import Model.Operations.MathematicalOperation;
+import Model.Operations.OperationFactory;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.Alert;
 

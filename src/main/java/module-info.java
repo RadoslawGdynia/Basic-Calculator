@@ -3,6 +3,6 @@ module Calculator {
     requires javafx.controls;
     requires slf4j.api;
 
-    opens Controls;
-    opens mainWindow;
+    opens Controller;
+    opens Main;
 }

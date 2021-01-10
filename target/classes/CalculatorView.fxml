@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="580.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controls.CalculatorFXMLController">
+<AnchorPane prefHeight="580.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controls.CalculatorController">
    <fx:define>
       <Font fx:id="FONT" size ="28"/>
       <Font fx:id="OPERATORS_FONT" size ="28" name="System Bold"/>
