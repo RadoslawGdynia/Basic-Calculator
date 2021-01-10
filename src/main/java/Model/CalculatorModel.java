@@ -6,6 +6,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.Alert;
 
 public class CalculatorModel {
+
+
     private Double firstNumber, secondNumber;
     private final SimpleStringProperty equationDisplayText = new SimpleStringProperty("");
     private final SimpleStringProperty currentlyCreatedNumber = new SimpleStringProperty("");
@@ -59,6 +61,7 @@ public class CalculatorModel {
             double result = mathOperation.calculate(numberValue1, numberValue2);
             currentlyCreatedNumber.setValue(result + "");
         } catch (ArithmeticException e) {
+            currentlyCreatedNumber.setValue("");
             createMathematicalErrorAlert(e.getMessage());
         }
     }
